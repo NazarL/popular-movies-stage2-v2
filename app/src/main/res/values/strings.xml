@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Popular Movies v2</string>
+    <string name="movie_details">Movie details</string>
+    <!-- -->
+    <string name="movie_poster">movie poster thumbnail</string>
+    <string name="txt_movie_title">Title</string>
+    <string name="txt_vote_average">Vote average:</string>
+    <string name="txt_release_date">Release date:</string>
+    <string name="txt_movie_overview">Description</string>
+    <string name="date">date</string>
+    <string name="number">number</string>
+    <!-- -->
+    <string name="no_connection_message">No internet connection</string>
+    <string name="nothing_found_message">Either nothing found or check internet connection</string>
+    <!-- -->
+    <string name="settings_menu_item">Sort Options</string>
+    <string name="settings_title">Movies sort options</string>
+    <!-- -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key">order_by</string>
+    <string name="settings_order_by_default">@string/settings_order_by_popularity_value</string>
+    <!-- -->
+    <string name="settings_order_by_popularity_label">Most popular</string>
+    <string name="settings_order_by_popularity_value">popular</string>
+    <string name="settings_order_by_rating_label">Top rated</string>
+    <string name="settings_order_by_rating_value">top_rated</string>
+    <string name="settings_order_by_favorite_label">Favorites</string>
+    <string name="settings_order_by_favorite_value">favorites</string>
+    <!-- -->
+    <string name="trailers_list">Trailers List</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="favorites">Favorites</string>
+    <string name="green_line">green line</string>
+    <string name="delete_all">Delete All Favorites</string>
+    <string name="delete_from_favorites">Delete from favorites</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="toast_added_favorites">Added to favorites</string>
+    <string name="toast_deleted_favorites">Deleted from favorites</string>
+</resources>
