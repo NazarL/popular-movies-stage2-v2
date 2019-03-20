@@ -11,8 +11,8 @@ import com.example.popularmoviesv2.Repository.MovieRepository;
 import java.util.List;
 
 public class MovieViewModel extends AndroidViewModel {
-    private MovieRepository mRepository;
-    private LiveData<List<Movie>> mAllMovies;
+    private final MovieRepository mRepository;
+    private final LiveData<List<Movie>> mAllMovies;
 
     public MovieViewModel(@NonNull Application application) {
         super(application);

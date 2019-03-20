@@ -11,6 +11,7 @@ import com.example.popularmoviesv2.Data.Review;
 import com.example.popularmoviesv2.R;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ReviewAdapter extends ArrayAdapter<Review> {
 
@@ -26,13 +27,14 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
                     .inflate(R.layout.list_item_review, parent, false);
         }
 
-        Review curentReview = getItem(position);
+        Review currentReview = getItem(position);
 
         TextView showReviewersName = listItemView.findViewById(R.id.txv_show_review_author);
-        showReviewersName.setText(curentReview.getAuthor());
-
         TextView showReviewText = listItemView.findViewById(R.id.txv_show_review_text);
-        showReviewText.setText(curentReview.getContent());
+
+        showReviewersName.setText(Objects.requireNonNull(currentReview).getAuthor());
+        showReviewText.setText(currentReview.getContent());
+
 
         return listItemView;
     }

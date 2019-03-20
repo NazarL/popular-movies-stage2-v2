@@ -12,8 +12,8 @@ import java.util.List;
 
 public class MovieRepository {
 
-    private MovieDao mMovieDao;
-    private LiveData<List<Movie>> mAllMovies;
+    private final MovieDao mMovieDao;
+    private final LiveData<List<Movie>> mAllMovies;
 
     public MovieRepository(Application application) {
         MovieDatabase db = MovieDatabase.getDatabase(application);
@@ -56,7 +56,7 @@ public class MovieRepository {
     }
 
     private static class deleteAllAsyncTask extends AsyncTask<Void, Void, Void> {
-        private MovieDao mAsyncTaskDao;
+        private final MovieDao mAsyncTaskDao;
 
         deleteAllAsyncTask(MovieDao dao) {
             mAsyncTaskDao = dao;
@@ -70,7 +70,7 @@ public class MovieRepository {
     }
 
     private static class deleteMovieAsyncTask extends AsyncTask<Movie, Void, Void> {
-        private MovieDao mAsyncTaskDao;
+        private final MovieDao mAsyncTaskDao;
 
         deleteMovieAsyncTask(MovieDao dao) {
             mAsyncTaskDao = dao;

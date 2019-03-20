@@ -11,6 +11,7 @@ import com.example.popularmoviesv2.Data.Trailer;
 import com.example.popularmoviesv2.R;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TrailerAdapter extends ArrayAdapter<Trailer> {
 
@@ -31,7 +32,7 @@ public class TrailerAdapter extends ArrayAdapter<Trailer> {
         Trailer currentTrailer = getItem(position);
 
         TextView showTrailerNameTV = listItemView.findViewById(R.id.txv_trailer_name);
-        showTrailerNameTV.setText(currentTrailer.getName());
+        showTrailerNameTV.setText(Objects.requireNonNull(currentTrailer).getName());
 
         return listItemView;
     }

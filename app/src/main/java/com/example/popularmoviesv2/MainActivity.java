@@ -44,7 +44,7 @@ public class MainActivity
     private MovieAdapter movieAdapter;
     private MovieViewModel movieViewModel;
 
-    String sortOptionSelected;
+    private String sortOptionSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,14 +64,14 @@ public class MainActivity
 
         movieViewModel = ViewModelProviders.of(this).get(MovieViewModel.class);
 
-        if (checkSortSelection().equals("favorites")) {
+        if (checkSortSelection().equals(getString(R.string.settings_order_by_favorite_value))) {
             displayFromDb();
         } else {
             displayFromQuery();
         }
     }
 
-    public void displayFromQuery() {
+    private void displayFromQuery() {
         if (checkConnectivity() != null && checkConnectivity().isConnected()) {
             getSupportLoaderManager().initLoader(0, null, this);
         } else {
@@ -79,7 +79,7 @@ public class MainActivity
         }
     }
 
-    public void displayFromDb() {
+    private void displayFromDb() {
         movieViewModel.getAllMovies().observe(this, new Observer<List<Movie>>() {
             @Override
             public void onChanged(@Nullable final List<Movie> movies) {
@@ -93,7 +93,7 @@ public class MainActivity
         });
     }
 
-    public String checkSortSelection() {
+    private String checkSortSelection() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         sortOptionSelected = sharedPrefs.getString(
                 getString(R.string.settings_order_by_key),
@@ -153,8 +153,7 @@ public class MainActivity
             default:
 
                 return super.onOptionsItemSelected(item);
-    }
-
+        }
 
 
     }

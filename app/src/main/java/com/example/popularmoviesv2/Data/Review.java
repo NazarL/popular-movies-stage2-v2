@@ -2,8 +2,8 @@ package com.example.popularmoviesv2.Data;
 
 public class Review {
 
-    private String mAuthor;
-    private String mContent;
+    private final String mAuthor;
+    private final String mContent;
 
     public Review (String author, String content) {
         mAuthor = author;

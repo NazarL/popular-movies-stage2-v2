@@ -6,7 +6,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
-import com.example.popularmoviesv2.Utilities.Constants;
+import java.util.Objects;
 
 @Entity(tableName = "MovieFavoritesTable")
 public class Movie implements Parcelable {
@@ -30,7 +30,7 @@ public class Movie implements Parcelable {
     }
 
     private Movie(Parcel in) {
-        this.id = in.readString();
+        this.id = Objects.requireNonNull(in.readString());
         this.posterPath = in.readString();
         this.originalTitle = in.readString();
         this.releaseDate = in.readString();
@@ -76,26 +76,6 @@ public class Movie implements Parcelable {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
-    }
-
-    public void setOriginalTitle(String originalTitle) {
-        this.originalTitle = originalTitle;
-    }
-
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
-
-    public void setPlotSynopsis(String plotSynopsis) {
-        this.plotSynopsis = plotSynopsis;
-    }
-
-    public void setHighestRated(String highestRated) {
-        this.highestRated = highestRated;
     }
 
     @Override

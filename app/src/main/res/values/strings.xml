@@ -27,14 +27,13 @@
     <string name="settings_order_by_favorite_label">Favorites</string>
     <string name="settings_order_by_favorite_value">favorites</string>
     <!-- -->
-    <string name="trailers_list">Trailers List</string>
     <string name="trailers">Trailers</string>
     <string name="reviews">Reviews</string>
-    <string name="favorites">Favorites</string>
-    <string name="green_line">green line</string>
     <string name="delete_all">Delete All Favorites</string>
     <string name="delete_from_favorites">Delete from favorites</string>
     <string name="add_to_favorites">Add to favorites</string>
     <string name="toast_added_favorites">Added to favorites</string>
     <string name="toast_deleted_favorites">Deleted from favorites</string>
+    <string name="no_contents_yet_available">Nothing yet available</string>
+
 </resources>

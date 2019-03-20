@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
-    private Context context;
+    private final Context context;
     private static List<Movie> mMovies;
 
     public void setData(List<Movie> movies) {
@@ -74,8 +74,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView posterIMV;
-        private View parentView;
+        final ImageView posterIMV;
+        private final View parentView;
 
         public ViewHolder(View itemView) {
             super(itemView);

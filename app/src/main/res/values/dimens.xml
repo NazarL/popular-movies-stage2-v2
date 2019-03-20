@@ -4,5 +4,4 @@
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_12dp">12dp</dimen>
     <dimen name="poster_width_185dp">185dp</dimen>
-    <dimen name="landscape_overview_w360dp">360dp</dimen>
 </resources>

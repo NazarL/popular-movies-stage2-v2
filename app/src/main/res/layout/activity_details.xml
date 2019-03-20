@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,9 +15,9 @@
             android:id="@+id/imv_poster_thumbnail"
             android:layout_width="@dimen/poster_width_185dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_4dp"
             android:adjustViewBounds="true"
-            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/movie_poster" />
 
         <TextView
@@ -110,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_4dp"
-            android:text="@string/favorites" />
+            android:text="@string/add_to_favorites" />
 
 
         <TextView
@@ -125,6 +124,16 @@
             android:padding="@dimen/margin_4dp"
             android:text="@string/trailers"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/txv_no_trailers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_4dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/no_contents_yet_available"
+            android:visibility="gone" />
 
         <ListView
             android:id="@+id/lsv_trailers_list"
@@ -150,6 +159,15 @@
             android:text="@string/reviews"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
+        <TextView
+            android:id="@+id/txv_no_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_4dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/no_contents_yet_available"
+            android:visibility="gone" />
 
         <ListView
             android:id="@+id/lsv_reviews_list"
@@ -164,6 +182,5 @@
         </ListView>
 
     </LinearLayout>
-
 
 </android.support.v4.widget.NestedScrollView>

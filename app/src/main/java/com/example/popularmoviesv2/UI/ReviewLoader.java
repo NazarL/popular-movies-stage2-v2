@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ReviewLoader extends AsyncTaskLoader<List<Review>> {
 
-    private String mUrl;
+    private final String mUrl;
 
     public  ReviewLoader (@NonNull Context context, String url) {
         super(context);
